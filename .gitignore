@@ -1,0 +1,9 @@
+tmp
+log
+config/world.rb
+db/*.sqlite
+db/*.sqlite2
+db/*.sqlite3
+db/*.db
+.DS_Store
+vendor/plugins/*/.git

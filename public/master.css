@@ -1,0 +1,588 @@
+/*------------------------------------------------------------------------------------
+  @group Global Reset
+------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  margin: 0;
+  text-align: left;
+  padding: 0;
+  font: normal 12px/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #e0e0e0;
+  color: #333;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+/* Hide from IE Mac \*/
+.clearfix {
+  display: block;
+}
+/* End hide from IE Mac */
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group Layout
+------------------------------------------------------------------------------------*/
+
+body {
+  font-size: 100%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+a {
+  color: #ed1556;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  background-color: #ed1556;
+}
+
+#header, #content, #footer {
+  width: 40em;
+  margin: 0 auto;
+  padding: 0 2em;
+  z-index: 0;
+  position: relative;
+  font-size: 1em;
+}
+
+#header {
+  background: #ffffff;
+}
+
+#content {
+  padding-top: 1em;
+  padding-bottom: 2em;
+  background: #eeeeee;
+}
+
+
+#footer {
+padding: 1.5em 2.5em;
+border-top: 1px solid #ccc;
+font-size: .8em;
+width: 50em !important;
+color: #666;
+text-align: right;
+}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group Projects
+------------------------------------------------------------------------------------*/
+
+#projects {
+  margin: 1em 0 2em;
+  border-top: 1px solid #c0c0c0;
+}
+
+#projects li {
+  position: relative;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+#projects li.odd {
+  background: #e6e6e6;
+}
+
+#projects li a {
+  font-size: 2em;
+  padding: .25em;
+  line-height: 1.2;
+  font-weight: bold;
+  display: block;
+}
+
+#projects li a.pass {
+  color: #337022;
+}
+
+#projects li a.fail {
+  color: #ff1100;
+}
+
+#projects li a.pending {
+  color: #ff1100;
+}
+
+#projects li .meta {
+  position: absolute;
+  right: .6em;
+  top: 1.5em;
+  font-size: 0.8em;
+  color: #999999;
+  text-align: right;
+}
+
+#projects li.testing .meta {
+  right: 1.6em;
+}
+
+#projects li.pass .meta {
+  color: #337022;
+}
+
+#projects li.fail .meta {
+  color: #ff1100;
+}
+
+#past_milestone li {
+  padding: 0 0 15px 0;
+}
+
+#past_milestone li a {
+  display: block;
+  padding: .25em;
+  margin-bottom: .25em;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#past_milestone li a strong {
+  font-size: 1.3em;
+}
+
+#past_milestone li a .attribution {
+  font-size: .9em;
+}
+
+#projects li.pass a, #past_milestone li.pass a {
+  background-color: #bbf8aa;
+  border-color: #99d688;
+  color: #337022;
+}
+
+#projects li.pass a .attribution, #past_milestone li.pass a .attribution {
+  color: #77b466;
+}
+#content #projects li.pass a:hover, #content #past_milestone li.pass a:hover {
+  background-color: #ddffcc;
+}
+  
+#projects li.fail a, #past_milestone li.fail a {
+  background-color: #ffbbaa;
+  border-color: #dd9988;
+  color: #ff1100;
+}
+
+#projects li.fail a .attribution, #past_milestone li.fail a .attribution {
+  color: #bb7766;
+}
+
+#projects li.fail a:hover, #past_milestone li.fail a:hover {
+  background-color: #ffddcc;
+}
+  
+#test h1, #test blockquote, #current_milestone h1, #current_milestone blockquote {
+  border-width: 0 1px;
+  border-style: solid;
+}
+
+#test h1, #current_milestone h1 {
+  border-top-width: 1px;
+}
+
+#test blockquote, #current_milestone blockquote {
+  bottom-bottom-width: 1px;
+  line-height: 1.4;
+}
+
+#test.pass h1, #test.pass blockquote, 
+#current_milestone.pass h1, #current_milestone.pass blockquote {
+  background-color: #bbf8aa;
+  border-color: #99d688 #ccffbb #ccffbb #99d688;
+}
+
+#test.pass h1, #current_milestone.pass h1 {
+  color: #337022;
+}
+
+#test.pass .meta, #current_milestone.pass .meta {
+  color: #77b466;
+}
+
+#test.fail h1, #test.fail blockquote, 
+#current_milestone.fail h1, #current_milestone.fail blockquote {
+  background-color: #ffbbaa;
+  border-color: #dd9988 #ffccbb #ffccbb #dd9988;
+}
+
+#test.fail h1, #current_milestone.fail h1 {
+  color: #ff1100;
+}
+
+#test.fail .meta, #current_milestone.fail .meta {
+  color: #bb7766;
+}
+
+#test h1, #current_milestone h1 {
+  margin-top: .5em;
+  margin-bottom: 0;
+  padding: .25em;
+  color: #337022;
+}
+
+#test blockquote, #current_milestone blockquote {
+  padding: .75em;
+  margin-bottom: 2em;
+}
+
+#test blockquote .meta, #current_milestone blockquote .meta {
+  margin-top: 1em;
+  display: block;
+  font-size: .9em;
+}
+
+#test pre.output, #current_milestone pre.output {
+  background: #111;
+  color: #fff;
+  padding: .5em;
+  overflow: auto;
+  max-height: 50em;
+  font-size: .825em;
+}
+
+#test pre.output .color30, #current_milestone pre.output .color30 {
+  color: #333;
+}
+
+#test pre.output .color31, #current_milestone pre.output .color31 {
+  color: #e33;
+}
+
+#test pre.output .color32, #current_milestone pre.output .color32 {
+  color: #3e3;
+}
+
+#test pre.output .color33, #current_milestone pre.output .color33 {
+  color: #ee3;
+}
+
+#test pre.output .color34, #current_milestone pre.output .color34 {
+  color: #33e;
+}
+
+#test pre.output .color35, #current_milestone pre.output .color35 {
+  color: #e3e;
+}
+
+#test pre.output .color36, #current_milestone pre.output .color36 {
+  color: #3ee;
+}
+
+#test pre.output .color37, #current_milestone pre.output .color37 {
+  color: #fff;
+}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group Form
+------------------------------------------------------------------------------------*/
+
+#test form p {
+  margin-top: 1em;
+  position: relative;
+}
+
+#test form p.checkbox label {
+  margin-top: 0 !important;
+}
+
+#test form input.text, #test form textarea {
+  width: 30em;
+  padding: .2em .4em;
+  color: #4e4e4e;
+  height: 1.4em;
+}
+
+#test form label {
+  float: left;
+  display: block;
+  margin-top: .5em;
+  width: 8em;
+  margin-right: .75em;
+}
+
+#test form .with_errors label {
+  background: red;
+  color: white;
+  position: relative;
+  top: -.7em;
+}
+
+#test form .with_errors.required label {
+  position: static;
+  margin-right: .25em;
+  padding: 0 .2em;
+}
+
+#test form .with_errors input, #test form .with_errors textarea {
+  border: 2px solid #f22;
+  background: #fee;
+  color: #222222;
+}
+
+#test form .required label {
+  float: none;
+  display: block;
+  width: auto;
+  position: relative;
+  font-weight: bold;
+  margin-top: 1em;
+  text-indent: -.65em;
+}
+
+#test form .required label:before {
+  content: "* ";
+  color: #ed1556;
+}
+
+#test form .required input.text {
+  width: 25.6em;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#test form .normal {
+  margin-top: 2em;
+}
+
+#test form h2.notifier label {
+  float: none;
+  width: auto;
+  margin-right: 0;
+}
+
+#test form h2.notifier label .warning {
+  font-size: .5em;
+  font-weight: normal;
+  color: #999999;
+}
+
+#test form fieldset {
+  padding-bottom: 1em;
+  margin-left: 1.35em;
+  border-bottom: 1px solid #c0c0c0;
+  margin-bottom: 1em;
+}
+
+#test form fieldset h3 {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+#test form fieldset p.normal {
+  margin-top: 1em;
+}
+
+#test form fieldset p label {
+  width: 6.7em;
+}
+
+#test form p.submit {
+  margin-top: 2em;
+}
+
+#test form p.submit:after {
+  display: block;
+  clear: both;
+  float: none;
+  content: ".";
+  text-indent: -9999em;
+  text-align: left;
+}
+
+#test form p.submit.destroy {
+  margin-top: 0;
+}
+
+#test form p.submit.destroy button {
+  float: none;
+  display: inline;
+}
+
+#test .blank_slate p, #test .error p {
+  position: relative;
+  top: .3em;
+}
+
+#test .blank_slate h1, #test .error h1 {
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#test .blank_slate h1 button, #test .error h1 button {
+  float: none;
+  border: 0 none;
+  background: transparent;
+  display: inline;
+  color: #ed1556;
+  padding: 0.25em 0;
+  margin: 0;
+}
+  
+#test .blank_slate h1 button:hover, #test .error h1 button:hover {
+  background: #ed1556;
+  color: #ffffff;
+}
+
+#test .error dt {
+  margin-top: 1.4em;
+  margin-bottom: .3em;
+  font-size: 1.75em;
+  font-family: Georgia, Times New Roman, serif;
+}
+  
+#test .error dd {
+  line-height: 1.4;
+}
+
+#test .error .backtrace {
+  margin: 1em 0;
+  overflow: scroll;
+  height: 30em;
+  border: 1px solid #c0c0c0;
+  line-height: 1.6;
+}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group Typopretty
+------------------------------------------------------------------------------------*/
+
+.app {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 12px 0 0 0;
+}
+
+#header h1 {
+font-weight: bold;
+font-size: 1.5em;
+}
+
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+  color: #4e4e4e;
+}
+
+#content h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: .75em;
+  padding: .25em 0;
+  line-height: 1.2;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+#content h2 {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 1em 0 .2em;
+}
+
+#content h3 {
+  font-weight: bold;
+  font-size: 1.25em;
+  margin: .25em 0;
+}
+
+#content h4, #content h5, #content h6 {
+  font-weight: bold;
+  margin-top: .5em;
+}
+
+#content code, #content pre, #content textarea, #content input {
+  font-family: Monaco, Deja Vu Sans Mono, Inconsolata, Consolas, monospace;
+}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group Links
+------------------------------------------------------------------------------------*/
+
+a.pass {
+  color: #bbf8aa;
+}
+
+a.pass:hover {
+  background-color: #bbf8aa;
+  color: white;
+}
+
+a.fail {
+  color: #ffbbaa;
+}
+
+a.fail:hover {
+  background-color: #ffbbaa;
+  color: white;
+}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group Links
+------------------------------------------------------------------------------------*/
